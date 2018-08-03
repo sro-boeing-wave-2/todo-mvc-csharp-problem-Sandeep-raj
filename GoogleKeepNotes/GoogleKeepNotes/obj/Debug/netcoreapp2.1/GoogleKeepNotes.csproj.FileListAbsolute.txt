@@ -1,0 +1,14 @@
+c:\users\admin\source\repos\GoogleKeepNotes\GoogleKeepNotes\bin\Debug\netcoreapp2.1\GoogleKeepNotes.deps.json
+c:\users\admin\source\repos\GoogleKeepNotes\GoogleKeepNotes\bin\Debug\netcoreapp2.1\GoogleKeepNotes.runtimeconfig.json
+c:\users\admin\source\repos\GoogleKeepNotes\GoogleKeepNotes\bin\Debug\netcoreapp2.1\GoogleKeepNotes.runtimeconfig.dev.json
+c:\users\admin\source\repos\GoogleKeepNotes\GoogleKeepNotes\bin\Debug\netcoreapp2.1\GoogleKeepNotes.dll
+c:\users\admin\source\repos\GoogleKeepNotes\GoogleKeepNotes\obj\Debug\netcoreapp2.1\GoogleKeepNotes.csprojAssemblyReference.cache
+c:\users\admin\source\repos\GoogleKeepNotes\GoogleKeepNotes\obj\Debug\netcoreapp2.1\GoogleKeepNotes.csproj.CoreCompileInputs.cache
+c:\users\admin\source\repos\GoogleKeepNotes\GoogleKeepNotes\obj\Debug\netcoreapp2.1\GoogleKeepNotes.RazorAssemblyInfo.cache
+c:\users\admin\source\repos\GoogleKeepNotes\GoogleKeepNotes\obj\Debug\netcoreapp2.1\GoogleKeepNotes.RazorAssemblyInfo.cs
+c:\users\admin\source\repos\GoogleKeepNotes\GoogleKeepNotes\obj\Debug\netcoreapp2.1\GoogleKeepNotes.AssemblyInfoInputs.cache
+c:\users\admin\source\repos\GoogleKeepNotes\GoogleKeepNotes\obj\Debug\netcoreapp2.1\GoogleKeepNotes.AssemblyInfo.cs
+c:\users\admin\source\repos\GoogleKeepNotes\GoogleKeepNotes\obj\Debug\netcoreapp2.1\GoogleKeepNotes.RazorTargetAssemblyInfo.cache
+c:\users\admin\source\repos\GoogleKeepNotes\GoogleKeepNotes\bin\Debug\netcoreapp2.1\GoogleKeepNotes.pdb
+c:\users\admin\source\repos\GoogleKeepNotes\GoogleKeepNotes\obj\Debug\netcoreapp2.1\GoogleKeepNotes.dll
+c:\users\admin\source\repos\GoogleKeepNotes\GoogleKeepNotes\obj\Debug\netcoreapp2.1\GoogleKeepNotes.pdb
