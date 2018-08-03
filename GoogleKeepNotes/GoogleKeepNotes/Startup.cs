@@ -12,6 +12,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.EntityFrameworkCore;
 using GoogleKeepNotes.Models;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace GoogleKeepNotes
 {
@@ -31,6 +32,12 @@ namespace GoogleKeepNotes
 
             services.AddDbContext<NoteContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("NoteContext")));
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
+
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,7 +51,11 @@ namespace GoogleKeepNotes
             {
                 app.UseHsts();
             }
-
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+            });
             app.UseHttpsRedirection();
             app.UseMvc();
         }

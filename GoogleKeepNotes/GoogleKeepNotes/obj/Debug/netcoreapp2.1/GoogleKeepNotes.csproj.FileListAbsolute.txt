@@ -12,3 +12,17 @@ c:\users\admin\source\repos\GoogleKeepNotes\GoogleKeepNotes\obj\Debug\netcoreapp
 c:\users\admin\source\repos\GoogleKeepNotes\GoogleKeepNotes\bin\Debug\netcoreapp2.1\GoogleKeepNotes.pdb
 c:\users\admin\source\repos\GoogleKeepNotes\GoogleKeepNotes\obj\Debug\netcoreapp2.1\GoogleKeepNotes.dll
 c:\users\admin\source\repos\GoogleKeepNotes\GoogleKeepNotes\obj\Debug\netcoreapp2.1\GoogleKeepNotes.pdb
+E:\workspace\Stackroute\todo-mvc-csharp-problem-Sandeep-raj\GoogleKeepNotes\GoogleKeepNotes\bin\Debug\netcoreapp2.1\GoogleKeepNotes.deps.json
+E:\workspace\Stackroute\todo-mvc-csharp-problem-Sandeep-raj\GoogleKeepNotes\GoogleKeepNotes\bin\Debug\netcoreapp2.1\GoogleKeepNotes.runtimeconfig.json
+E:\workspace\Stackroute\todo-mvc-csharp-problem-Sandeep-raj\GoogleKeepNotes\GoogleKeepNotes\bin\Debug\netcoreapp2.1\GoogleKeepNotes.runtimeconfig.dev.json
+E:\workspace\Stackroute\todo-mvc-csharp-problem-Sandeep-raj\GoogleKeepNotes\GoogleKeepNotes\bin\Debug\netcoreapp2.1\GoogleKeepNotes.dll
+E:\workspace\Stackroute\todo-mvc-csharp-problem-Sandeep-raj\GoogleKeepNotes\GoogleKeepNotes\bin\Debug\netcoreapp2.1\GoogleKeepNotes.pdb
+E:\workspace\Stackroute\todo-mvc-csharp-problem-Sandeep-raj\GoogleKeepNotes\GoogleKeepNotes\obj\Debug\netcoreapp2.1\GoogleKeepNotes.csprojAssemblyReference.cache
+E:\workspace\Stackroute\todo-mvc-csharp-problem-Sandeep-raj\GoogleKeepNotes\GoogleKeepNotes\obj\Debug\netcoreapp2.1\GoogleKeepNotes.csproj.CoreCompileInputs.cache
+E:\workspace\Stackroute\todo-mvc-csharp-problem-Sandeep-raj\GoogleKeepNotes\GoogleKeepNotes\obj\Debug\netcoreapp2.1\GoogleKeepNotes.RazorAssemblyInfo.cache
+E:\workspace\Stackroute\todo-mvc-csharp-problem-Sandeep-raj\GoogleKeepNotes\GoogleKeepNotes\obj\Debug\netcoreapp2.1\GoogleKeepNotes.RazorAssemblyInfo.cs
+E:\workspace\Stackroute\todo-mvc-csharp-problem-Sandeep-raj\GoogleKeepNotes\GoogleKeepNotes\obj\Debug\netcoreapp2.1\GoogleKeepNotes.AssemblyInfoInputs.cache
+E:\workspace\Stackroute\todo-mvc-csharp-problem-Sandeep-raj\GoogleKeepNotes\GoogleKeepNotes\obj\Debug\netcoreapp2.1\GoogleKeepNotes.AssemblyInfo.cs
+E:\workspace\Stackroute\todo-mvc-csharp-problem-Sandeep-raj\GoogleKeepNotes\GoogleKeepNotes\obj\Debug\netcoreapp2.1\GoogleKeepNotes.RazorTargetAssemblyInfo.cache
+E:\workspace\Stackroute\todo-mvc-csharp-problem-Sandeep-raj\GoogleKeepNotes\GoogleKeepNotes\obj\Debug\netcoreapp2.1\GoogleKeepNotes.dll
+E:\workspace\Stackroute\todo-mvc-csharp-problem-Sandeep-raj\GoogleKeepNotes\GoogleKeepNotes\obj\Debug\netcoreapp2.1\GoogleKeepNotes.pdb

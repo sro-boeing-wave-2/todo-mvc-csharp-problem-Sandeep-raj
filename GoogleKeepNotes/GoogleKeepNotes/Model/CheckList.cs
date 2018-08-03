@@ -9,6 +9,8 @@ namespace GoogleKeepNotes.Model
 {
     public class CheckList
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public bool isChecked { get; set; }
         public string checkList { get; set; }

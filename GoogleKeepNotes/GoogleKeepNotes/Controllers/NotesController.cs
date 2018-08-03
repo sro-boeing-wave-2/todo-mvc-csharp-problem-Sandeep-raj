@@ -25,10 +25,11 @@ namespace GoogleKeepNotes.Controllers
         [HttpGet]
         public IEnumerable<Note> GetNote([FromQuery] string Label, [FromQuery] string Pinned, [FromQuery] string Title)
         {
+
             return _context.Note.Include(x => x.labels).Include(x => x.checklists).Where(n =>
-               n.Pinned.ToString() == (Pinned ?? n.Pinned.ToString()) &&
+               n.Pinned.ToString() == ((Pinned == null) ? n.Pinned.ToString():Pinned) &&
                n.Title == (Title ?? n.Title) &&
-               n.labels.Any(x => (Label != null)?x.label == Label : true)
+               n.labels.Any(x => (Label != null)? x.label == Label : true)
                ).ToList();
         }
 
@@ -68,13 +69,13 @@ namespace GoogleKeepNotes.Controllers
                 return BadRequest();
             }
 
-            Note n = await _context.Note.Include(x => x.labels).Include(x => x.checklists).SingleOrDefaultAsync(x => x.Id == id);
-            n.Pinned = note.Pinned;
-            n.Title = note.Title;
-            n.PlainText = note.PlainText;
+            //Note n = await _context.Note.Include(x => x.labels).Include(x => x.checklists).SingleOrDefaultAsync(x => x.Id == id);
+            //n.Pinned = note.Pinned;
+            //n.Title = note.Title;
+            //n.PlainText = note.PlainText;
 
-            List<Labels> l = new List<Labels>(note.labels);
-            List<CheckList> c = new List<CheckList>(note.checklists);
+            //List<Labels> l = new List<Labels>(note.labels);
+            //List<CheckList> c = new List<CheckList>(note.checklists);
 
             await _context.Note.Include(x => x.labels).Include(x => x.checklists).ForEachAsync(x =>
             {
@@ -84,11 +85,40 @@ namespace GoogleKeepNotes.Controllers
                     x.PlainText = note.PlainText;
                     x.Pinned = note.Pinned;
                     
+                    foreach(Labels templ in note.labels)
+                    {
+                        Labels a = x.labels.Find(y => y.Id == templ.Id);
+                        if(a != null)
+                        {
+                            a.label = templ.label;
+                        }
+                        else
+                        {
+                            Labels lab = new Labels() { label = templ.label };
+                            x.labels.Add(lab);
+                        }
+                    }
+
+                    foreach (CheckList tempc in note.checklists)
+                    {
+                        CheckList a = x.checklists.Find(y => y.Id == tempc.Id);
+                        if (a != null)
+                        {
+                            a.checkList = tempc.checkList;
+                            a.isChecked = tempc.isChecked;
+                        }
+                        else
+                        {
+                            CheckList ch = new CheckList() { checkList = tempc.checkList , isChecked = tempc.isChecked };
+                            x.checklists.Add(ch);
+                        }
+                    }
+
                 }
             });
 
 
-            _context.Entry(n).State = EntityState.Modified;
+            //_context.Entry(n).State = EntityState.Modified;
 
             try
             {
@@ -129,23 +159,35 @@ namespace GoogleKeepNotes.Controllers
         }
 
         // DELETE: api/Notes/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteNote([FromRoute] int id)
+        [HttpDelete]
+        public async Task<IActionResult> DeleteNote([FromQuery] int id, [FromQuery] string Label, [FromQuery] string Pinned, [FromQuery] string Title)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            var note = await _context.Note.FindAsync(id);
+            //var note = await _context.Note.FindAsync(id);
+
+            var note = _context.Note.Include(x => x.labels).Include(x => x.checklists).Where(n =>
+                n.Pinned.ToString() == ((Pinned == null) ? n.Pinned.ToString() : Pinned) &&
+                n.Title == (Title ?? n.Title) &&
+                n.Id == ((id == 0) ? n.Id : id)
+               //n.labels.Any(x => (Label != null) ? x.label == Label : true)
+               ).ToList();
+
             if (note == null)
             {
                 return NotFound();
             }
-            note = _context.Note.Include(x => x.labels).Include(x => x.checklists).SingleOrDefault( x => x.Id == id);
-            note.labels.Clear();
-            note.checklists.Clear();
-            _context.Note.Remove(note);
+
+            //note.labels.Clear();
+            //note.checklists.Clear();
+
+            //var notes = _context.Note.Where(x => x.Id == id).ToList();
+            note.ForEach(x => _context.Labels.RemoveRange(x.labels));
+            note.ForEach(x => _context.CheckList.RemoveRange(x.checklists));
+            _context.Note.RemoveRange(note);
             await _context.SaveChangesAsync();
 
             return Ok(note);
