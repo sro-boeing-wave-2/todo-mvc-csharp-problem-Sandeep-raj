@@ -1,5 +1,5 @@
 language: csharp
-solution: todo-mvc-csharp-problem-Sandeep-raj.sln
+solution: WebApplication14.sln
 notifications:
   email:
     on_success: always
@@ -9,3 +9,4 @@ mono: none
 dotnet: 2.1
 script:
   - dotnet restore
+  - dotnet test Test/
